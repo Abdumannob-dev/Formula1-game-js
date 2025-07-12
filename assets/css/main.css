@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background: black;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100vh;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header .road {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  padding: 20px;
+  background: grey;
+}
+
+.road::before {
+  position: absolute;
+  /* top: 200px; */
+  bottom: 150px;
+  text-align: center;
+  font-size: 3rem;
+  left: 100px;
+  content: "🏁START🏁";
+  transform: rotate(90deg);
+  width: 350px;
+  height: 60px;
+  background-color: white;
+}
+
+.road::after {
+  position: absolute;
+  bottom: 150px;
+  text-align: center;
+  font-size: 3rem;
+  right: 0px;
+  content: "🚩FINISH🚩";
+  transform: rotate(90deg);
+  width: 350px;
+  height: 70px;
+  background-color: white;
+  z-index: 1;
+}
+
+.car_n1 {
+  position: absolute;
+  z-index: 2;
+  left: 150px;
+  top: 100px;
+  max-width: 100px;
+  width: 150px;
+  transition: transform 0.2s ease-in;
+}
+
+.car_n1 img {
+  width: 100%;
+}
+
+.car_n2 {
+  position: absolute;
+  z-index: 2;
+  left: 150px;
+  top: 20px;
+  max-width: 100px;
+  width: 150px;
+  transition: transform 0.2s ease-in;
+}
+
+.car_n2 img {
+  width: 100%;
+}
+
+.car_n3 {
+  position: absolute;
+  z-index: 2;
+  left: 150px;
+  top: 190px;
+  max-width: 100px;
+  width: 150px;
+  transition: transform 0.2s ease-in;
+}
+
+.car_n3 img {
+  width: 100%;
+}
+
+.header_btn {
+  display: flex;
+  column-gap: 15px;
+  margin: 25px auto;
+}
+
+
+.header_btn button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    column-gap: 5px;
+    padding: 20px 30px;
+    border: none;
+    background: blue;
+    color: white;
+    font-weight: bold;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.header_btn button:first-child{
+    background: green;
+    font-size: 1rem;
+}
+
+.header_btn button i {
+    font-size: 1rem;
+    color: white;
+}
+
+
+
